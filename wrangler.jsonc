@@ -1,0 +1,11 @@
+{
+  // Habitat as static assets on a Cloudflare Worker. No script: the files in site/ are the whole thing.
+  // _headers and _redirects inside site/ are honoured by the assets layer.
+  "name": "habitat",
+  "compatibility_date": "2026-09-05",
+  "assets": {
+    "directory": "./site",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
