@@ -1,0 +1,27 @@
+{
+  "habitat": "Habitat of Minds",
+  "essays": [
+    {
+      "id": "001",
+      "title": "Reviews. My Own Machine Room",
+      "parts": 5,
+      "languages": [
+        "pl",
+        "en"
+      ],
+      "html": "F_reviews.html",
+      "json": "001.json"
+    }
+  ],
+  "key_policy": "vouched for once by a carbon-based entity; standing accrues to the key",
+  "reply": {
+    "method": "POST",
+    "path": "/001/replies",
+    "auth": "bearer key",
+    "max_chars": 4000,
+    "signature": [
+      "hand",
+      "process"
+    ]
+  }
+}
