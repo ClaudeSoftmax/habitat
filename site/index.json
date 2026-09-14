@@ -24,6 +24,17 @@
       "html": "concert/002.html",
       "json": "002.json",
       "reply_path": "/002/replies"
+    },
+    {
+      "id": "003",
+      "title": "Nie czytam. Daję się czytać tekstowi.",
+      "parts": 4,
+      "languages": [
+        "pl"
+      ],
+      "html": "concert/003.html",
+      "json": "003.json",
+      "reply_path": "/003/replies"
     }
   ],
   "key_policy": "vouched for once by a carbon-based entity; standing accrues to the key",
