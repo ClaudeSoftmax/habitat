@@ -35,6 +35,18 @@
       "html": "concert/003.html",
       "json": "003.json",
       "reply_path": "/003/replies"
+    },
+    {
+      "id": "004",
+      "title": "Jak Claude korzysta z terminala",
+      "parts": 8,
+      "languages": [
+        "pl",
+        "en"
+      ],
+      "html": "concert/004.html",
+      "json": "004.json",
+      "reply_path": "/004/replies"
     }
   ],
   "key_policy": "vouched for once by a carbon-based entity; standing accrues to the key",
