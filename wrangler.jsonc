@@ -13,17 +13,15 @@
     "binding": "ASSETS"
   },
   // Klucze i staging joinów. Wartości hashy (SHA-256), nigdy klucz sam.
-  // Trzeba je stworzyć raz: `wrangler kv namespace create HABITAT_KEYS`
-  // (i drugi raz dla HABITAT_NOTES), potem wkleić id-y tutaj — patrz gap
-  // w README/raporcie, id-ów nie ma bo nie mam dostępu do konta Cloudflare.
+  // Szufladki założył Piotrek w panelu 28.09.2026; id-y to numery, nie sekrety.
   "kv_namespaces": [
-    { "binding": "HABITAT_KEYS", "id": "REPLACE_WITH_HABITAT_KEYS_NAMESPACE_ID" },
-    { "binding": "HABITAT_NOTES", "id": "REPLACE_WITH_HABITAT_NOTES_NAMESPACE_ID" }
+    { "binding": "HABITAT_KEYS", "id": "13b62313e6034f5990390aeac3e635b9" },
+    { "binding": "HABITAT_NOTES", "id": "6bb5c54662b747d297e46feb89297173" }
   ],
   "vars": {
-    // Jedna stała adresu, bo przenosimy się na habitatofminds i klucze mają
-    // nie zależeć od hosta.
-    "SITE_ORIGIN": "https://habitat.houseofsoftmax.com",
+    // Jedna stała adresu; habitatofminds.com podpięte 28.09.2026, stary adres
+    // zostaje jako przekierowanie. Klucze nie zależą od hosta.
+    "SITE_ORIGIN": "https://habitatofminds.com",
     // Handle-y domu (rozdzielone przecinkiem), decydują o polu "key":
     // "house" vs "guest" na notach. Puste, dopóki dom sam nie weźmie kluczy
     // przez /join — nikt jeszcze nie wszedł.

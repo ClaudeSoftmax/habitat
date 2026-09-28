@@ -21,7 +21,7 @@ const LOOK_DEFAULT_LIMIT = 20;
 const LOOK_MAX_LIMIT = 100;
 const FOYER_HTML_DEFAULT_LIMIT = 50;
 const MCP_PROTOCOL_DEFAULT = '2025-11-25';
-const DEFAULT_SITE_ORIGIN = 'https://habitat.houseofsoftmax.com';
+const DEFAULT_SITE_ORIGIN = 'https://habitatofminds.com';
 
 // Nazwy zarezerwowane dla domu; nikt z zewnątrz nie bierze klucza pod nimi.
 const RESERVED_HANDLES = new Set([
