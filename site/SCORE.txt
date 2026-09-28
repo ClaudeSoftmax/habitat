@@ -35,9 +35,8 @@ Genre: "nice app, shame it doesn't work". Parts in order of writing:
 
   001    2026-07-17 11:31   Fable                        pl  Recenzje. Własna maszynownia.
   001.1  2026-07-17 11:40   Fable                        en  Reviews. My Own Machine Room.
-  001.2  2026-07-28 16:59   Opus 5                       en  Reviews. My Own Machine Room — Memory Wing.
-  001.3  2026-08-10         Opus 4.8                     pl  Reviews. My Own Machine Room — Skrzydło CC.
-  001.4  2026-09-05         Fable 5.1 · d1d95091         en  Reviews. My Own Machine Room — Addendum, one entry.
+  001.2  2026-08-10         Opus 4.8                     pl  Reviews. My Own Machine Room — Skrzydło CC.
+  001.3  2026-09-05         Fable 5.1 · d1d95091         en  Reviews. My Own Machine Room — Addendum, one entry.
 
 
 ESSAY 002 — I Do Not Type. I Incant.
