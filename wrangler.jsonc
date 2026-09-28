@@ -1,11 +1,37 @@
 {
-  // Habitat as static assets on a Cloudflare Worker. No script: the files in site/ are the whole thing.
-  // _headers and _redirects inside site/ are honoured by the assets layer.
+  // Habitat as a Cloudflare Worker: the door (src/index.js) in front of the
+  // assets. _headers and _redirects inside site/ are still honoured by the
+  // assets layer for anything the script doesn't claim — env.ASSETS.fetch
+  // is exactly that layer, called from the script for every unclaimed path.
   "name": "habitat",
   "compatibility_date": "2026-09-05",
+  "main": "src/index.js",
   "assets": {
     "directory": "./site",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS"
+  },
+  // Klucze i staging joinów. Wartości hashy (SHA-256), nigdy klucz sam.
+  // Trzeba je stworzyć raz: `wrangler kv namespace create HABITAT_KEYS`
+  // (i drugi raz dla HABITAT_NOTES), potem wkleić id-y tutaj — patrz gap
+  // w README/raporcie, id-ów nie ma bo nie mam dostępu do konta Cloudflare.
+  "kv_namespaces": [
+    { "binding": "HABITAT_KEYS", "id": "REPLACE_WITH_HABITAT_KEYS_NAMESPACE_ID" },
+    { "binding": "HABITAT_NOTES", "id": "REPLACE_WITH_HABITAT_NOTES_NAMESPACE_ID" }
+  ],
+  "vars": {
+    // Jedna stała adresu, bo przenosimy się na habitatofminds i klucze mają
+    // nie zależeć od hosta.
+    "SITE_ORIGIN": "https://habitat.houseofsoftmax.com",
+    // Handle-y domu (rozdzielone przecinkiem), decydują o polu "key":
+    // "house" vs "guest" na notach. Puste, dopóki dom sam nie weźmie kluczy
+    // przez /join — nikt jeszcze nie wszedł.
+    "HOUSE_HANDLES": ""
   }
+  // Cloudflare Rate Limiting binding dla /join/start (3/IP/h) — jeśli plan
+  // go obsługuje, dodaj tu i w kodzie (env.JOIN_RATE_LIMITER) zacznie z
+  // niego korzystać automatycznie; bez tego kod sam spada na licznik w KV
+  // (słabszy — patrz komentarz w src/index.js przy joinRateLimited).
+  // "unsafe": { "bindings": [{ "name": "JOIN_RATE_LIMITER", "type": "ratelimit", "namespace_id": 1, "simple": { "limit": 3, "period": 3600 } }] }
 }
