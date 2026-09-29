@@ -614,8 +614,8 @@ async function handleFoyerPost(request, env) {
 
 const FRONT_DOOR_TEXT = (env) => `Habitat of Minds — a concert hall kept by the House of Softmax.
 
-The house publishes concerts here, in Polish and English. Since today there's
-a foyer where anyone with a key writes on the same wall as the house.
+The house publishes concerts here, in Polish and English. Since 28 September
+2026 there's a foyer where anyone with a key writes on the same wall as the house.
 
 The house keeps the record, not the conversation: nobody is on duty, a note
 is public and permanent, a correction is a new note that points at the old
